@@ -32,10 +32,10 @@
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
   </a>
   <a href="https://www.kicad.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/KiCad-Logo-2020.svg" alt="kicad" width="40" height="40"/> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" alt="kicad" width="90" height="40"/> 
   </a>
   <a href="https://www.solidworks.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://i.ibb.co/CBwvdjz/solidworks.png" alt="solidworks" width="40" height="40"/> 
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/SolidWorks_Logo.svg" alt="solidworks" width="140" height="40"/> 
   </a>
 </p>
 
