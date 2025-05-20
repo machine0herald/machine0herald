@@ -9,7 +9,7 @@
 
 - Bsc student Mechanical engineering
 
-- I spend way too much free time on hobby projects
+- Certified SolidWorks Expert
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
