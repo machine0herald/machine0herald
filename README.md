@@ -5,11 +5,7 @@
 
 - 🌱 I’m currently learning **Computer vision in ROS2**
 
-- 💬 Ask me about **Solidworks and Robots**
-
 - Bsc student Mechanical engineering
-
-- Certified SolidWorks Expert
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
