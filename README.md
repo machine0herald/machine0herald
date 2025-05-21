@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [ATLAS](https://github.com/machine0herald/ATLAS.git)
 
-- 🌱 I’m currently learning **Computer vision in ROS2**
+- 🌱 currently learning **Computer vision in ROS2**
 
 - Bsc student Mechanical engineering
 
