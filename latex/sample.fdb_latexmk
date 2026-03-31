@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber sample"] 1774964825.58033 "sample.bcf" "sample.bbl" "sample" 1774966813.79122 0
-  "sample.bcf" 1774966813.69531 107540 39cb9ff52eafc37cffac8610df5bbfe0 "pdflatex"
+["biber sample"] 1774964825.58033 "sample.bcf" "sample.bbl" "sample" 1774966920.36214 0
+  "sample.bcf" 1774966920.26411 107540 39cb9ff52eafc37cffac8610df5bbfe0 "pdflatex"
   (generated)
   "sample.bbl"
   "sample.blg"
   (rewritten before read)
-["pdflatex"] 1774966812.55302 "/home/matt/Desktop/CV/latex/sample.tex" "sample.pdf" "sample" 1774966813.79145 0
+["pdflatex"] 1774966919.13967 "/home/matt/Desktop/CV/latex/sample.tex" "sample.pdf" "sample" 1774966920.36237 0
   "/etc/texmf/web2c/texmf.cnf" 1774958038.08866 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/matt/Desktop/CV/latex/sample.tex" 1774966812.37245 13183 b09fda54598ad4b5f49acb4684c89c75 ""
+  "/home/matt/Desktop/CV/latex/sample.tex" 1774966918.9563 13178 f781a11dc14089ec916c389bb559d03e ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc" 1622837620 3083 a707712f77b073b3833e4b1334a30e99 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc" 1622837620 2906 e48aa7c95dea478a2e011bcb4f7878c9 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/lato/a_cl4kdn.enc" 1561498483 2908 33404fff2a7b8e169974e96af0be5333 ""
@@ -245,14 +245,14 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1774963734.41724 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1774963752 8213190 842d234f17e194ce90566e7bf9dd39df ""
   "altacv.cls" 1774958953.50142 17713 2766496d895be383a78bb8c4388bb69f ""
-  "pdfa.xmpi" 1774966812.94149 5042 538ac0ed4af45d6545e556d9e6318bf8 "pdflatex"
+  "pdfa.xmpi" 1774966919.52412 5042 f9ad35a9fe6638474849f7765c03fb69 "pdflatex"
   "profile.jpeg" 1774958955.63741 63250 3ec456af4571212698b44f1d0118a4c7 ""
   "pubs-num.tex" 1774958956.0394 430 c0bbeafd1d4c738c415f863f7e62a637 ""
-  "sample.aux" 1774966813.69131 272 fad7393fcc1990667d9b134f44fd1fbd "pdflatex"
+  "sample.aux" 1774966920.26111 272 fad7393fcc1990667d9b134f44fd1fbd "pdflatex"
   "sample.bbl" 1774964826.24003 466 ee04f40f768daeed26442158e95aba61 "biber sample"
-  "sample.out" 1774966813.50716 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "sample.run.xml" 1774966813.69658 2412 c38981f0eb804c888f6b2c6e509aeb3b "pdflatex"
-  "sample.tex" 1774966812.37245 13183 b09fda54598ad4b5f49acb4684c89c75 ""
+  "sample.out" 1774966920.08646 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "sample.run.xml" 1774966920.26612 2412 c38981f0eb804c888f6b2c6e509aeb3b "pdflatex"
+  "sample.tex" 1774966918.9563 13178 f781a11dc14089ec916c389bb559d03e ""
   (generated)
   "pdfa.xmpi"
   "sample.aux"
