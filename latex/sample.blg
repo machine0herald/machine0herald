@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'sample.blg'
+[53] biber:340> INFO - === Tue Mar 31, 2026, 15:47:06
+[63] Biber.pm:419> INFO - Reading 'sample.bcf'
+[109] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[118] bbl.pm:660> INFO - Writing 'sample.bbl' with encoding 'UTF-8'
+[118] bbl.pm:763> INFO - Output to sample.bbl
+[118] Biber.pm:131> WARN - The file 'sample.bcf' does not contain any citations!
+[118] Biber.pm:133> INFO - WARNINGS: 1
