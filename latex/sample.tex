@@ -14,7 +14,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
 
-\documentclass[10pt, a4paper, withhyper]{altacv}
+\documentclass[8pt, a4paper, withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and simpleicons packages.
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
 
@@ -42,19 +42,25 @@
 \fi
 
 % Change the colours if you want to
+\definecolor{GitHubBlack}{HTML}{24292e}
+\definecolor{GitHubGreen}{HTML}{0FBF3E}
+\definecolor{GitHubBlue}{HTML}{1F6FEB}
+
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{333333}
 \definecolor{DarkPastelRed}{HTML}{434343}
 \definecolor{PastelRed}{HTML}{8F0D0D}
-\definecolor{GoldenEarth}{HTML}{E7D192}
-\colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
+\definecolor{GoldenEarth}{HTML}{8CF2A6}
+\colorlet{name}{white}
+\colorlet{tagline}{GitHubBlue}
+\colorlet{heading}{GitHubBlue}
 \colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
+\colorlet{subheading}{GitHubBlue}
+\colorlet{accent}{GitHubBlue}
+\colorlet{emphasis}{white}
+\colorlet{body}{white}
+\pagecolor{GitHubBlack}
+\color{white}
 
 % Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
@@ -180,22 +186,11 @@
     \cvsection{Projects}
 
     \cvevent{Cora}{Robotics Student Association}{Mar 2025 -- Present} {}
-    Cora is a 6 degree-of-freedom Cobot (Collaborative Robot arm) that I am
+    Cora is a 6 degree-of-freedom cobot (Collaborative Robot arm) that I am
     designing and building as a member of the Robotics Student Association (RSA)
     at TU Delft. In this project I have taken on the role of Lead Mechanical,
-    Electrical and Software Engineer. The arm is intended as a platform for educational and research
-    purposes.
-
-    % \vspace{0.5\baselineskip} % Adds an empty line before skills
-    % Skills:
-    % \begin{itemize}
-    %   \item Mechanical design and CAD modeling
-    %   \item C++ and Python programming
-    %   \item ROS2 integration
-    %   \item PCB design and fabrication
-    %   \item 3D printing and prototyping
-    %   % \item Computer vision
-    % \end{itemize}
+    Electrical and Software Engineer. Since march 2026, the team has expanded to five members with backgrounds in Mechanical Engineering, Electrical Engineering and computer science
+    The cobot is intended as a platform for educational and research purposes.
 
     \divider
 
@@ -234,9 +229,9 @@
 
     % \cvsection{A Day of My Life}
 
-    % % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-    % % \wheelchart{outer radius}{inner radius}{
-    % % comma-separated list of value/text width/color/detail}
+    % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+    % \wheelchart{outer radius}{inner radius}{
+    % comma-separated list of value/text width/color/detail}
     % \wheelchart{1.5cm}{0.5cm}{%
     %   6/8em/accent!30/{Sleep,\\beautiful sleep},
     %   3/8em/accent!40/Hopeful novelist by night,
@@ -303,7 +298,7 @@
     \divider
     \smallskip
 
-    \cvsubsection{Programming} \cvtag{C++} \cvtag{Python} \cvtag{ROS} \cvtag{Platform IO}
+    \cvsubsection{Programming} \cvtag{C++} \cvtag{Python} \cvtag{ROS 2} \cvtag{Platform IO}
     \cvtag{Git}\\
 
     \cvsubsection{Manufacturing} \cvtag{3D Printing} \cvtag{Sheetmetal Part Design}
@@ -312,7 +307,7 @@
     \cvsubsection{CAD} \cvtag{Solidworks} \cvtag{Onshape} \cvtag{KiCAD}\\
     % \cvtag{Embedded Systems}
 
-    % % ////////////////////////////////////////////////////////////////////
+    % ////////////////////////////////////////////////////////////////////
     % \cvsection{Languages}
     %   \cvskill{Dutch}{5}
     %   \divider
@@ -325,11 +320,6 @@
 
     %   \cvskill{Spanish}{3} %% Supports X.5 values.
 
-    %   %% Yeah I didn't spend too much time making all the
-    %   %% spacing consistent... sorry. Use \smallskip, \medskip,
-    %   %% \bigskip, \vspace etc to make adjustments.
-    %   \medskip
-
     % ////////////////////////////////////////////////////////////////////
     \cvsection{Extracurricular} \cvevent{Workshop Commission}{Robotics Student Association Delft}{Sept 2025 -- Current}{}
     \cvevent{Student Mentor}{TU Delft - Faculty of Mechanical Engineering}{Sept 2024 -- Feb 2025}{}
@@ -337,7 +327,7 @@
 
     \medskip
 
-    % \cvsection{Referees}
+    % \cvsection{References}
 
     % % \cvref{name}{email}{mailing address}
     % \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
@@ -354,12 +344,12 @@
     \cvsection{Certifications}
     \begin{small}
       \cvsubsection{SolidWorks} \cvevent{CSWA (Associate)}{SolidWorks Corporation}{Nov 2022}{}
-      % \cvevent{CSWA – Simulation}{SolidWorks Corporation}{Jun 2023}{}
+      \cvevent{CSWA – Simulation}{SolidWorks Corporation}{Jun 2023}{}
       \cvevent{CSWP (Professional)}{SolidWorks Corporation}{Jun 2023}{}
-      % \cvevent{CSWPA (Professional Advanced) – Drawings}{SolidWorks Corporation}{Jul 2023}{}
-      % \cvevent{CSWPA – Weldments}{SolidWorks Corporation}{Jul 2023}{}
-      % \cvevent{CSWPA – Sheetmetal}{SolidWorks Corporation}{Jul 2023}{}
-      % \cvevent{CSWPA – Surfacing}{SolidWorks Corporation}{Aug 2023}{}
+      \cvevent{CSWPA (Professional Advanced) – Drawings}{SolidWorks Corporation}{Jul 2023}{}
+      \cvevent{CSWPA – Weldments}{SolidWorks Corporation}{Jul 2023}{}
+      \cvevent{CSWPA – Sheetmetal}{SolidWorks Corporation}{Jul 2023}{}
+      \cvevent{CSWPA – Surfacing}{SolidWorks Corporation}{Aug 2023}{}
       \cvevent{CSWE (Expert)}{SolidWorks Corporation}{Nov 2023}{}
     \end{small}
   \end{paracol}
