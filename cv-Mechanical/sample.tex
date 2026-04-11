@@ -1,0 +1,233 @@
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
+
+\documentclass[8pt, a4paper, withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm, right=1.25cm, top=1.5cm, bottom=1.5cm, columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+\iftutex
+% If using xelatex or lualatex:
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+\else
+% If using pdflatex:
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+% \usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% GitHub-like dark theme (refined)
+\definecolor{GitHubBg}{HTML}{0D1117}        % main background
+\definecolor{GitHubSurface}{HTML}{161B22}   % slightly lighter panels
+\definecolor{GitHubBorder}{HTML}{30363D}    % borders / separators
+\definecolor{GitHubText}{HTML}{C9D1D9}      % primary text
+\definecolor{GitHubMuted}{HTML}{8B949E}     % secondary text
+\definecolor{GitHubAccent}{HTML}{58A6FF}    % links / highlights (blue)
+\definecolor{GitHubGreen}{HTML}{3FB950}     % subtle green (not neon)
+\definecolor{GitHubRed}{HTML}{F85149}       % optional accent
+
+% Apply colors
+\colorlet{name}{GitHubText}
+\colorlet{tagline}{GitHubAccent}
+\colorlet{heading}{GitHubAccent}
+\colorlet{headingrule}{GitHubBorder}
+\colorlet{subheading}{GitHubText}
+\colorlet{accent}{GitHubGreen}
+\colorlet{emphasis}{GitHubText}
+\colorlet{body}{GitHubText}
+
+\pagecolor{GitHubBg}
+\color{GitHubText}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+  \name{Matthew de Lannoy} \tagline{Mechanical Engineer}
+  \photoR{2.8cm}{profile}
+
+  \personalinfo{%
+
+  % Not all of these are required!
+  \email{matthewdelan@gmail.com} \phone{+31 6 45035492} \location{Delft, The Netherlands}
+  % \homepage{www.homepage.com}
+
+  % \linkedin{your_id}
+
+  \github{machine0herald}
+  }
+
+  \makecvheader
+  \AtBeginEnvironment{itemize}{\small}
+
+  %% Set the left/right column width ratio to 6:4.
+  \columnratio{0.6}
+
+  % Start a 2-column paracol. Both the left and right columns will automatically
+  % break across pages if things get too long.
+  \begin{paracol}
+    {2}
+    % \cvsection{Experience}
+
+    % \cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
+    % \begin{itemize}
+    % \item Job description 1
+    % \item Job description 2
+    % \end{itemize}
+
+    % \divider
+
+    % \cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
+    % \begin{itemize}
+    % \item Job description 1
+    % \item Job description 2
+    % \end{itemize}
+
+    % ////////////////////////////////////////////////////////////////////
+
+    \cvsection{Projects}
+    
+    \cvevent{
+      \href{https://github.com/C-O-R-A}{Cora} 
+      \href{https://github.com/C-O-R-A}{\faGithub}
+      \href{https://cad.onshape.com/documents/971c71e558f4d758be7c1282/w/a52d355fced062b7019a3a28/e/e9a08b2016a881ad8b69894a}{\faCube\ CAD}
+    }{Robotics Student Association}{Mar 2025 -- Present} {}    
+    \textbf{Cora} is a 6 degree-of-freedom cobot (Collaborative Robot arm) that I am
+    designing and building as a member of the Robotics Student Association (RSA)
+    at TU Delft. In this project I have taken on the role of Lead Mechanical,
+    Electrical and Software Engineer. Since March 2026, the team has expanded 
+    to five members with backgrounds in Mechanical Engineering, 
+    Electrical Engineering and Computer Science.
+    The cobot is intended as a platform for educational and research purposes.
+    The robot has a reach of 1.2m and a maximum payload of 4kg.
+    It runs ROS2 Jazzy on an onboard Raspberry Pi 5 SBC
+    and also features a socket interface and Python SDK for running programs 
+    remotely through LAN or WiFi.
+    
+    \divider
+    
+    \cvevent{
+      \href{https://github.com/C-O-R-A/cora-chess}{You vs Cobot} 
+      \href{https://github.com/C-O-R-A/cora-chess}{\faGithub}
+      }{Robotics Student Association}{Mar 2025 -- Present} {}
+      Running in parallel with \textbf{Cora} is its first application, \textbf{You vs Cobot}, 
+      where the Ethernet interface and Python SDK are used 
+      to make the robot play chess against a human opponent.
+      
+      \divider
+      
+      \cvevent{Cavolab}{Prysmian / Robohouse}{Sept 2025 - Present}{} As part of my
+      minor, I worked on a project to design and build an automated cable cleaning
+      robot for high voltage cable manufacturer Prysmian. 
+      The project was carried out in collaboration with
+      Robohouse, who provide expertise in automation and robotics as well as a workshop
+      and office space. My role in the team was that of Lead Mechanical Engineer. 
+      As part of that role, I was responsible for designing the linear gantry and
+      cable clamps as well as the structures that secure several pistons for securing and
+      working on the cable.
+      
+      \divider
+      
+      \cvevent{Atlas}{Robotics Student Association}{Sept 2024 - Mar 2025}{} Atlas
+      is a mostly 3D printed 6-DOF desktop robotic arm that I designed as part of
+      the Robotics Student Association. It has a reach of 500mm and a maximum payload
+      of 1kg. The arm was able to be controlled through the onboard computer. I later
+      decided to create a new arm under the name 'Cora', keeping in mind
+      the new insights I had gained.
+      
+      \divider
+      
+      \cvevent{Hexapod}{Robotics Student Association}{May 2024}{} In May 2024,
+      I designed and built a hexapod robot. This robot was designed to be used as
+      a platform for testing various sensors and algorithms for autonomous
+      navigation. The robot features six legs, each with three degrees of freedom,
+      and is capable of walking and climbing over obstacles. The robot is
+      controlled using a Servo2040 which has an RP2040 chip and is programmed
+      using Python.
+      
+      % ////////////////////////////////////////////////////////////////////
+      
+      
+      \cvsection{Education} 
+      \cvevent{B.Sc.\ Mechanical Engineering}{TU Delft}{Sept 2022 -- June 2026}{}
+      \cvevent{Minor\ Robotics}{TU Delft}{Sept 2025 -- Jan 2026}{}
+      
+      \switchcolumn
+      
+      % ////////////////////////////////////////////////////////////////////
+
+      \cvsection{Strengths and Skills}
+      \smallskip
+      
+      \cvsubsection{Programming} \cvtag{C++} \cvtag{Python} \cvtag{ROS 2} \cvtag{Platform IO}
+      \cvtag{Git}\\
+      
+      \cvsubsection{Manufacturing} \cvtag{3D Printing} \cvtag{Sheetmetal Part Design}
+      \cvtag{Design for CNC machining} \cvtag{PCB Design}\\
+      
+      \cvsubsection{CAD} \cvtag{Solidworks} \cvtag{Onshape} \cvtag{KiCAD}\\
+      % \cvtag{Embedded Systems}
+      
+    
+      % ////////////////////////////////////////////////////////////////////
+    \cvsection{Extracurricular} \cvevent{Workshop Committee}{Robotics Student Association Delft}{Sept 2025 -- Current}{}
+    \cvevent{Student Mentor}{TU Delft - Faculty of Mechanical Engineering}{Sept 2024 -- Feb 2025}{}
+    \cvevent{Teaching Assistant - CAD}{TU Delft - Faculty of Mechanical Engineering}{Nov 2023 -- Feb 2026}{}
+    \cvevent{Teaching Assistant - Robotics}{TU Delft - Faculty of Mechanical Engineering}{Feb 2026 -- Apr 2026}{}
+    
+    \medskip
+    
+    % \cvsection{References}
+    
+    % \cvref{name}{email}{mailing address}
+    % \cvref{Prof.\ Werner van de Sande}{TU Delft - PME}{a.beta@university.edu}
+    
+    % \divider
+    
+    % \cvref{Prof.\ Martijn Wisse}{TU Delft - COR}{TU Delft - COR}
+    
+    % \divider
+    
+    % \cvref{Prof.\ Martin Klomp}{Robohouse}{g.delta@university.edu}
+    
+    % ////////////////////////////////////////////////////////////////////
+
+
+    \cvsection{Certifications}
+    \begin{small}
+      \cvsubsection{SolidWorks} \cvevent{CSWA (Associate)}{}{}{}
+        \cvevent{CSWA – Simulation}{}{}{}
+        \cvevent{CSWP (Professional)}{}{}{}
+        \cvevent{CSWPA (Professional Advanced) – Drawings}{}{}{}
+        \cvevent{CSWPA – Weldments}{}{}{}
+        \cvevent{CSWPA – Sheetmetal}{}{}{}
+        \cvevent{CSWPA – Surfacing}{}{}{}
+        \cvevent{CSWE (Expert)}{}{}{}
+    \end{small}
+
+  \end{paracol}
+  \end{document}

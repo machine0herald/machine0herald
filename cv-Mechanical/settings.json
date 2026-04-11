@@ -1,0 +1,7 @@
+"latex-workshop.latex.tools": [
+  {
+    "name": "pdflatex",
+    "command": "pdflatex",
+    "args": ["-interaction=nonstopmode", "%DOC%"]
+  }
+]

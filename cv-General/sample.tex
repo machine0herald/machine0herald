@@ -1,20 +1,7 @@
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.7.4, 30 July 2025) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
-
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
 
-\documentclass[8pt, a4paper, withhyper]{altacv}
+\documentclass[9pt, a4paper, withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and simpleicons packages.
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
 
@@ -24,10 +11,6 @@
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
-% WHEN COMPILING WITH XELATEX PLEASE USE
-% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
 \iftutex
 % If using xelatex or lualatex:
 \setmainfont{Roboto Slab}
@@ -78,22 +61,6 @@
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 % \renewcommand{\cvLocationMarker}{\faMapMarker*}
 
-% If your CV/résumé is in a language other than English,
-% then you probably want to change these so that when you
-% copy-paste from the PDF or run pdftotext, the location
-% and date marker icons for \cvevent will paste as correct
-% translations. For example Spanish:
-% \renewcommand{\locationname}{Ubicación}
-% \renewcommand{\datename}{Fecha}
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want to use an author-year reference style like APA(6)
-%% for your publication list
-% \input{pubs-authoryear}
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want an originally numerical reference style like IEEE
-%% for your publication list
 \input{pubs-num}
 
 %% sample.bib contains your publications
@@ -101,9 +68,7 @@
 
 \begin{document}
   \name{Matthew de Lannoy} \tagline{Mechanical Engineer}
-  %% You can add multiple photos on the left or right
   \photoR{2.8cm}{profile}
-  % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
   \personalinfo{%
 
@@ -143,6 +108,7 @@
     % \end{itemize}
 
     % ////////////////////////////////////////////////////////////////////
+
     \cvsection{Projects}
     
     \cvevent{
@@ -153,14 +119,14 @@
     \textbf{Cora} is a 6 degree-of-freedom cobot (Collaborative Robot arm) that I am
     designing and building as a member of the Robotics Student Association (RSA)
     at TU Delft. In this project I have taken on the role of Lead Mechanical,
-    Electrical and Software Engineer. Since march 2026, the team has expanded 
+    Electrical and Software Engineer. Since March 2026, the team has expanded 
     to five members with backgrounds in Mechanical Engineering, 
-    Electrical Engineering and computer science
-    The cobot is intended as a platform for educational and research purposes. 
-    the robot has a reach of 1.2m and a maximum payload of 4kgs.
-    It runs ROS2 Jazzy on an on board Raspberry Pi 5 sbc 
-    and also features an socket interface and Python SDK for running programmes 
-    remotely through LAN or Wifi.
+    Electrical Engineering and Computer Science.
+    The cobot is intended as a platform for educational and research purposes.
+    The robot has a reach of 1.2m and a maximum payload of 4kg.
+    It runs ROS2 Jazzy on an onboard Raspberry Pi 5 SBC
+    and also features a socket interface and Python SDK for running programs 
+    remotely through LAN or WiFi.
     
     \divider
     
@@ -168,21 +134,21 @@
       \href{https://github.com/C-O-R-A/cora-chess}{You vs Cobot} 
       \href{https://github.com/C-O-R-A/cora-chess}{\faGithub}
     }{Robotics Student Association}{Mar 2025 -- Present} {}
-    Running in Parallel with \textbf{Cora} is its first application, \textbf{You vs Cobot}, 
+    Running in parallel with \textbf{Cora} is its first application, \textbf{You vs Cobot}, 
     where the Ethernet interface and Python SDK are used 
     to make the robot play chess against a human opponent.
 
     \divider
 
     \cvevent{Cavolab}{Prysmian / Robohouse}{Sept 2025 - Present}{} As part of my
-    minor I worked on a project to design and build an automated cable cleaning
+    minor, I worked on a project to design and build an automated cable cleaning
     robot for high voltage cable manufacturer Prysmian. 
     The project was carried out in collaboration with
     Robohouse, who provide expertise in automation and robotics as well as a workshop
-    and office space. My role in the team was that of lead mechanical engineer. 
-    As part of that role i was responsible for designing the linear gantry and
-    cable clamps aswell as the structures that secure several pistons for securing and 
-    working on the cable
+    and office space. My role in the team was that of Lead Mechanical Engineer. 
+    As part of that role, I was responsible for designing the linear gantry and
+    cable clamps as well as the structures that secure several pistons for securing and
+    working on the cable.
 
     \divider
 
@@ -195,41 +161,31 @@
     % \divider
 
     \cvevent{Atlas}{Robotics Student Association}{Sept 2024 - Mar 2025}{} Atlas
-    is a mostly 3d printed 6-dof desktop robotic arm that I designed as part of
+    is a mostly 3D printed 6-DOF desktop robotic arm that I designed as part of
     the Robotics Student Association. It has a reach of 500mm and a maximum payload
     of 1kg. The arm was able to be controlled through the onboard computer. I later
-    on decided to create a new arm under the name 'Cora', keeping in mind
-    the new insights i had gained.
+    decided to create a new arm under the name 'Cora', keeping in mind
+    the new insights I had gained.
 
     \divider
 
-    \cvevent{Hexapod}{Robotics Student Association}{May 2024}{} In May 2024
+    \cvevent{Hexapod}{Robotics Student Association}{May 2024}{} In May 2024,
     I designed and built a hexapod robot. This robot was designed to be used as
     a platform for testing various sensors and algorithms for autonomous
     navigation. The robot features six legs, each with three degrees of freedom,
     and is capable of walking and climbing over obstacles. The robot is
-    controlled using a Servo2040 which has an rp2040 chip and is programmed
+    controlled using a Servo2040 which has an RP2040 chip and is programmed
     using Python.
 
-    % \cvsection{A Day of My Life}
-
-    % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-    % \wheelchart{outer radius}{inner radius}{
-    % comma-separated list of value/text width/color/detail}
-    % \wheelchart{1.5cm}{0.5cm}{%
-    %   6/8em/accent!30/{Sleep,\\beautiful sleep},
-    %   3/8em/accent!40/Hopeful novelist by night,
-    %   8/8em/accent!60/Daytime job,
-    %   2/10em/accent/Sports and relaxation,
-    %   5/6em/accent!20/Spending time with family
-    % }
-
+    
     % use ONLY \newpage if you want to force a page break for
     % ONLY the current column
     % \newpage
 
-    % \cvsection{Publications}
+    % ////////////////////////////////////////////////////////////////////
 
+    % \cvsection{Publications}
+    
     % %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
     % %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
     % %% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
@@ -238,106 +194,125 @@
     %   Lim/Tracy,
     %   Lim/L.\bibnamedelimi T.}
     % %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
-
+    
     % \nocite{*}
-
+    
     % \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
+    
     % \divider
-
+    
     % \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-
+    
     % \divider
-
+    
     % \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-
+    
     % %% Switch to the right column. This will now automatically move to the second
     % %% page if the content is too long.
     % \switchcolumn
-
+    
     % \cvsection{My Life Philosophy}
-
+    
     % \begin{quote}
     % ``Something smart or heartfelt, preferably in one sentence.''
     % \end{quote}
-
+    
     % \cvsection{Most Proud of}
-
+    
     % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-
+    
+    % \divider
+    
+    % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+    
     % \divider
 
-    % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
-    % \divider
-
-    % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
     % ////////////////////////////////////////////////////////////////////
+
+    \switchcolumn
+    
     \cvsection{Education} 
     \cvevent{B.Sc.\ Mechanical Engineering}{TU Delft}{Sept 2022 -- June 2026}{}
     \cvevent{Minor\ Robotics}{TU Delft}{Sept 2025 -- Jan 2026}{}
-
-    \switchcolumn
-    % ////////////////////////////////////////////////////////////////////
+    
     \cvsection{Strengths and Skills}
     \smallskip
-
+    
     \cvsubsection{Programming} \cvtag{C++} \cvtag{Python} \cvtag{ROS 2} \cvtag{Platform IO}
     \cvtag{Git}\\
-
+    
     \cvsubsection{Manufacturing} \cvtag{3D Printing} \cvtag{Sheetmetal Part Design}
     \cvtag{Design for CNC machining} \cvtag{PCB Design}\\
-
+    
     \cvsubsection{CAD} \cvtag{Solidworks} \cvtag{Onshape} \cvtag{KiCAD}\\
     % \cvtag{Embedded Systems}
-
+    
     % ////////////////////////////////////////////////////////////////////
+
     % \cvsection{Languages}
     %   \cvskill{Dutch}{5}
     %   \divider
-
+    
     %   \cvskill{English}{5}
     %   \divider
-
+    
     %   \cvskill{Papiamento}{5}
     %   \divider
-
+    
     %   \cvskill{Spanish}{3} %% Supports X.5 values.
 
     % ////////////////////////////////////////////////////////////////////
+
+    % \cvsection{Competencies}
+  
+    % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+    % \wheelchart{outer radius}{inner radius}{
+    % comma-separated list of value/text width/color/detail}
+    % \wheelchart{1cm}{0.2cm}{%
+    %   6/8em/accent!30/{Programming},
+    %   3/8em/accent!40/Hopeful novelist by night,
+    %   8/8em/accent!60/Daytime job,
+    %   2/10em/accent/Sports and relaxation,
+    %   5/6em/accent!20/Spending time with family
+    % }
+    
+    % ////////////////////////////////////////////////////////////////////
+
     \cvsection{Extracurricular} \cvevent{Workshop Committee}{Robotics Student Association Delft}{Sept 2025 -- Current}{}
     \cvevent{Student Mentor}{TU Delft - Faculty of Mechanical Engineering}{Sept 2024 -- Feb 2025}{}
     \cvevent{Teaching Assistant - CAD}{TU Delft - Faculty of Mechanical Engineering}{Nov 2023 -- Feb 2026}{}
     \cvevent{Teaching Assistant - Robotics}{TU Delft - Faculty of Mechanical Engineering}{Feb 2026 -- Apr 2026}{}
-
-    \medskip
-
-    \cvsection{References}
-
-    % \cvref{name}{email}{mailing address}
-    \cvref{Prof.\ Werner van de Sande}{TU Delft - PME}{a.beta@university.edu}
-
-    \divider
-
-    \cvref{Prof.\ Martijn Wisse}{TU Delft - COR}{TU Delft - COR}
-
-    \divider
     
-    \cvref{Prof.\ Martin Klomp}{Robohouse}{g.delta@university.edu}
-
+    \medskip
+    
+    % \cvsection{References}
+    
+    % \cvref{name}{email}{mailing address}
+    % \cvref{Prof.\ Werner van de Sande}{TU Delft - PME}{a.beta@university.edu}
+    
+    % \divider
+    
+    % \cvref{Prof.\ Martijn Wisse}{TU Delft - COR}{TU Delft - COR}
+    
+    % \divider
+    
+    % \cvref{Prof.\ Martin Klomp}{Robohouse}{g.delta@university.edu}
+    
     % ////////////////////////////////////////////////////////////////////
+
     % \switchcolumn
     % \newpage
-    \cvsection{Certifications}
-    \begin{small}
-      \cvsubsection{SolidWorks} \cvevent{CSWA (Associate)}{}{}{}
-        \cvevent{CSWA – Simulation}{}{}{}
-        \cvevent{CSWP (Professional)}{}{}{}
-        \cvevent{CSWPA (Professional Advanced) – Drawings}{}{}{}
-        \cvevent{CSWPA – Weldments}{}{}{}
-        \cvevent{CSWPA – Sheetmetal}{}{}{}
-        \cvevent{CSWPA – Surfacing}{}{}{}
-        \cvevent{CSWE (Expert)}{}{}{}
-    \end{small}
+    % \cvsection{Certifications}
+    % \begin{small}
+    %   \cvsubsection{SolidWorks} \cvevent{CSWA (Associate)}{}{}{}
+    %     \cvevent{CSWA – Simulation}{}{}{}
+    %     \cvevent{CSWP (Professional)}{}{}{}
+    %     \cvevent{CSWPA (Professional Advanced) – Drawings}{}{}{}
+    %     \cvevent{CSWPA – Weldments}{}{}{}
+    %     \cvevent{CSWPA – Sheetmetal}{}{}{}
+    %     \cvevent{CSWPA – Surfacing}{}{}{}
+    %     \cvevent{CSWE (Expert)}{}{}{}
+    % \end{small}
+
   \end{paracol}
-\end{document}
+  \end{document}
