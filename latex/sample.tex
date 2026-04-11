@@ -41,26 +41,28 @@
 \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% Change the colours if you want to
-\definecolor{GitHubBlack}{HTML}{24292e}
-\definecolor{GitHubGreen}{HTML}{0FBF3E}
-\definecolor{GitHubBlue}{HTML}{1F6FEB}
+% GitHub-like dark theme (refined)
+\definecolor{GitHubBg}{HTML}{0D1117}        % main background
+\definecolor{GitHubSurface}{HTML}{161B22}   % slightly lighter panels
+\definecolor{GitHubBorder}{HTML}{30363D}    % borders / separators
+\definecolor{GitHubText}{HTML}{C9D1D9}      % primary text
+\definecolor{GitHubMuted}{HTML}{8B949E}     % secondary text
+\definecolor{GitHubAccent}{HTML}{58A6FF}    % links / highlights (blue)
+\definecolor{GitHubGreen}{HTML}{3FB950}     % subtle green (not neon)
+\definecolor{GitHubRed}{HTML}{F85149}       % optional accent
 
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{333333}
-\definecolor{DarkPastelRed}{HTML}{434343}
-\definecolor{PastelRed}{HTML}{8F0D0D}
-\definecolor{GoldenEarth}{HTML}{8CF2A6}
-\colorlet{name}{white}
-\colorlet{tagline}{GitHubBlue}
-\colorlet{heading}{GitHubBlue}
-\colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{white}
-\colorlet{accent}{GitHubBlue}
-\colorlet{emphasis}{white}
-\colorlet{body}{white}
-\pagecolor{GitHubBlack}
-\color{white}
+% Apply colors
+\colorlet{name}{GitHubText}
+\colorlet{tagline}{GitHubAccent}
+\colorlet{heading}{GitHubAccent}
+\colorlet{headingrule}{GitHubBorder}
+\colorlet{subheading}{GitHubText}
+\colorlet{accent}{GitHubGreen}
+\colorlet{emphasis}{GitHubText}
+\colorlet{body}{GitHubText}
+
+\pagecolor{GitHubBg}
+\color{GitHubText}
 
 % Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
@@ -109,55 +111,13 @@
   \email{matthewdelan@gmail.com} \phone{+31 6 45035492} \location{Delft, The Netherlands}
   % \homepage{www.homepage.com}
 
-  % \twitter{@twitterhandle}
-
-  % \xtwitter{@x-handle}
-
   % \linkedin{your_id}
 
-  % \github{machine0herald}
-
-  % \orcid{0000-0000-0000-0000}
-
-  %% You can add your own arbitrary detail with
-
-  % \printinfo{symbol}{detail}[optional hyperlink prefix]
-
-  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-
-
-  %% Or you can declare your own field with
-
-  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-
-  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-
-  % \gitlab{your_id}
-
-  %%
-
-  %% For services and platforms like Mastodon where there isn't a
-
-  %% straightforward relation between the user ID/nickname and the hyperlink,
-
-  %% you can use \printinfo directly e.g.
-
-  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
-
-  %% But if you absolutely want to create new dedicated info fields for
-
-  %% such platforms, then use \NewInfoField* with a star:
-
-  % \NewInfoField*{mastodon}{\faMastodon}
-
-  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
-
-  %% the full hyperlink.
+  \github{machine0herald}
   }
 
   \makecvheader
-  %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-  % \AtBeginEnvironment{itemize}{\small}
+  \AtBeginEnvironment{itemize}{\small}
 
   %% Set the left/right column width ratio to 6:4.
   \columnratio{0.6}
@@ -184,21 +144,45 @@
 
     % ////////////////////////////////////////////////////////////////////
     \cvsection{Projects}
-
-    \cvevent{Cora}{Robotics Student Association}{Mar 2025 -- Present} {}
-    Cora is a 6 degree-of-freedom cobot (Collaborative Robot arm) that I am
+    
+    \cvevent{
+      \href{https://github.com/C-O-R-A}{Cora} 
+      \href{https://github.com/C-O-R-A}{\faGithub}
+      \href{https://cad.onshape.com/documents/971c71e558f4d758be7c1282/w/a52d355fced062b7019a3a28/e/e9a08b2016a881ad8b69894a}{\faCube\ CAD}
+    }{Robotics Student Association}{Mar 2025 -- Present} {}    
+    \textbf{Cora} is a 6 degree-of-freedom cobot (Collaborative Robot arm) that I am
     designing and building as a member of the Robotics Student Association (RSA)
     at TU Delft. In this project I have taken on the role of Lead Mechanical,
-    Electrical and Software Engineer. Since march 2026, the team has expanded to five members with backgrounds in Mechanical Engineering, Electrical Engineering and computer science
-    The cobot is intended as a platform for educational and research purposes.
+    Electrical and Software Engineer. Since march 2026, the team has expanded 
+    to five members with backgrounds in Mechanical Engineering, 
+    Electrical Engineering and computer science
+    The cobot is intended as a platform for educational and research purposes. 
+    the robot has a reach of 1.2m and a maximum payload of 4kgs.
+    It runs ROS2 Jazzy on an on board Raspberry Pi 5 sbc 
+    and also features an socket interface and Python SDK for running programmes 
+    remotely through LAN or Wifi.
+    
+    \divider
+    
+    \cvevent{
+      \href{https://github.com/C-O-R-A/cora-chess}{You vs Cobot} 
+      \href{https://github.com/C-O-R-A/cora-chess}{\faGithub}
+    }{Robotics Student Association}{Mar 2025 -- Present} {}
+    Running in Parallel with \textbf{Cora} is its first application, \textbf{You vs Cobot}, 
+    where the Ethernet interface and Python SDK are used 
+    to make the robot play chess against a human opponent.
 
     \divider
 
     \cvevent{Cavolab}{Prysmian / Robohouse}{Sept 2025 - Present}{} As part of my
-    minor I am working on a project to design and build an automated cable cleaning
-    robot for Prysmian. The project is being carried out in collaboration with
+    minor I worked on a project to design and build an automated cable cleaning
+    robot for high voltage cable manufacturer Prysmian. 
+    The project was carried out in collaboration with
     Robohouse, who provide expertise in automation and robotics as well as a workshop
-    and office space.
+    and office space. My role in the team was that of lead mechanical engineer. 
+    As part of that role i was responsible for designing the linear gantry and
+    cable clamps aswell as the structures that secure several pistons for securing and 
+    working on the cable
 
     \divider
 
@@ -219,7 +203,7 @@
 
     \divider
 
-    \cvevent{Hexapod Robot}{Robotics Student Association}{May 2024}{} In May 2024
+    \cvevent{Hexapod}{Robotics Student Association}{May 2024}{} In May 2024
     I designed and built a hexapod robot. This robot was designed to be used as
     a platform for testing various sensors and algorithms for autonomous
     navigation. The robot features six legs, each with three degrees of freedom,
@@ -289,13 +273,13 @@
 
     % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
     % ////////////////////////////////////////////////////////////////////
-    \cvsection{Education} \cvevent{B.Sc.\ Mechanical Engineering}{TU Delft}{Sept 2022 -- June 2026}{}
+    \cvsection{Education} 
+    \cvevent{B.Sc.\ Mechanical Engineering}{TU Delft}{Sept 2022 -- June 2026}{}
+    \cvevent{Minor\ Robotics}{TU Delft}{Sept 2025 -- Jan 2026}{}
 
     \switchcolumn
     % ////////////////////////////////////////////////////////////////////
     \cvsection{Strengths and Skills}
-
-    \divider
     \smallskip
 
     \cvsubsection{Programming} \cvtag{C++} \cvtag{Python} \cvtag{ROS 2} \cvtag{Platform IO}
@@ -321,36 +305,39 @@
     %   \cvskill{Spanish}{3} %% Supports X.5 values.
 
     % ////////////////////////////////////////////////////////////////////
-    \cvsection{Extracurricular} \cvevent{Workshop Commission}{Robotics Student Association Delft}{Sept 2025 -- Current}{}
+    \cvsection{Extracurricular} \cvevent{Workshop Committee}{Robotics Student Association Delft}{Sept 2025 -- Current}{}
     \cvevent{Student Mentor}{TU Delft - Faculty of Mechanical Engineering}{Sept 2024 -- Feb 2025}{}
-    \cvevent{Teachers Assistant - CAD}{TU Delft - Faculty of Mechanical Engineering}{Nov 2023 -- Feb 2025}{}
+    \cvevent{Teaching Assistant - CAD}{TU Delft - Faculty of Mechanical Engineering}{Nov 2023 -- Feb 2026}{}
+    \cvevent{Teaching Assistant - Robotics}{TU Delft - Faculty of Mechanical Engineering}{Feb 2026 -- Apr 2026}{}
 
     \medskip
 
-    % \cvsection{References}
+    \cvsection{References}
 
-    % % \cvref{name}{email}{mailing address}
-    % \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-    % {Address Line 1\\Address Line 2}
+    % \cvref{name}{email}{mailing address}
+    \cvref{Prof.\ Werner van de Sande}{TU Delft - PME}{a.beta@university.edu}
 
-    % \divider
+    \divider
 
-    % \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
-    % {Address Line 1\\Address Line 2}
+    \cvref{Prof.\ Martijn Wisse}{TU Delft - COR}{TU Delft - COR}
+
+    \divider
+    
+    \cvref{Prof.\ Martin Klomp}{Robohouse}{g.delta@university.edu}
 
     % ////////////////////////////////////////////////////////////////////
     % \switchcolumn
     % \newpage
     \cvsection{Certifications}
     \begin{small}
-      \cvsubsection{SolidWorks} \cvevent{CSWA (Associate)}{SolidWorks Corporation}{Nov 2022}{}
-      \cvevent{CSWA – Simulation}{SolidWorks Corporation}{Jun 2023}{}
-      \cvevent{CSWP (Professional)}{SolidWorks Corporation}{Jun 2023}{}
-      \cvevent{CSWPA (Professional Advanced) – Drawings}{SolidWorks Corporation}{Jul 2023}{}
-      \cvevent{CSWPA – Weldments}{SolidWorks Corporation}{Jul 2023}{}
-      \cvevent{CSWPA – Sheetmetal}{SolidWorks Corporation}{Jul 2023}{}
-      \cvevent{CSWPA – Surfacing}{SolidWorks Corporation}{Aug 2023}{}
-      \cvevent{CSWE (Expert)}{SolidWorks Corporation}{Nov 2023}{}
+      \cvsubsection{SolidWorks} \cvevent{CSWA (Associate)}{}{}{}
+        \cvevent{CSWA – Simulation}{}{}{}
+        \cvevent{CSWP (Professional)}{}{}{}
+        \cvevent{CSWPA (Professional Advanced) – Drawings}{}{}{}
+        \cvevent{CSWPA – Weldments}{}{}{}
+        \cvevent{CSWPA – Sheetmetal}{}{}{}
+        \cvevent{CSWPA – Surfacing}{}{}{}
+        \cvevent{CSWE (Expert)}{}{}{}
     \end{small}
   \end{paracol}
 \end{document}
