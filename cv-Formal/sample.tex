@@ -1,0 +1,216 @@
+\documentclass[9pt, a4paper, withhyper, normalphoto]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm, columnsep=1.5cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+\iftutex
+% If using xelatex or lualatex:
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\renewcommand{\familydefault}{\rmdefault}
+\else
+% If using pdflatex:
+\usepackage{tgtermes}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\rmdefault}
+\fi
+
+% Professional formal theme
+\definecolor{FormalDarkBlue}{HTML}{1B3A57}   % main dark blue
+\definecolor{FormalLightGray}{HTML}{F5F5F5}  % light background
+\definecolor{FormalText}{HTML}{2C2C2C}       % dark text
+\definecolor{FormalMuted}{HTML}{666666}      % muted text
+\definecolor{FormalAccent}{HTML}{003D7A}     % accent blue
+\definecolor{FormalRule}{HTML}{CCCCCC}       % rule/border
+
+% Apply colors
+\colorlet{name}{FormalDarkBlue}
+\colorlet{tagline}{FormalAccent}
+\colorlet{heading}{FormalDarkBlue}
+\colorlet{headingrule}{FormalRule}
+\colorlet{subheading}{FormalDarkBlue}
+\colorlet{accent}{FormalAccent}
+\colorlet{emphasis}{FormalText}
+\colorlet{body}{FormalText}
+
+\pagecolor{white}
+\color{FormalText}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\fontsize{28}{30}\selectfont\bfseries}
+\renewcommand{\personalinfofont}{\small}
+\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\normalsize\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+  \name{Matthew de Lannoy} 
+  \tagline{Robotics Engineer}
+  % \photoR{2.5cm}{profile}
+
+  \personalinfo{%
+  % Not all of these are required!
+  \email{matthewdelan@gmail.com} 
+  \phone{+31 6 45035492} 
+  \location{Delft, The Netherlands}
+  \href{https://github.com/matt-rbt}{\faGithub matt-rbt}
+  }
+
+  \makecvheader
+  \AtBeginEnvironment{itemize}{\normalsize}
+
+  %% Set the left/right column width ratio to 6:4.
+  \columnratio{0.65}
+
+  % Start a 2-column paracol. Both the left and right columns will automatically
+  % break across pages if things get too long.
+  \begin{paracol}{2}
+  \columnratio{0.65}
+
+    \cvsection{Projects}
+
+    \textbf{Cora: Collaborative Robot Platform}      
+    \href{https://github.com/C-O-R-A}{\faGithub} 
+    \href{https://cad.onshape.com/documents/971c71e558f4d758be7c1282/w/a52d355fced062b7019a3a28/e/b5e4ddc0803eb7ed0deb6f1e}{\faCube}| Mar 2025 -- Present
+    \begin{itemize}
+      \item Lead ME/EE/SW engineer on open-source cobot (1.0\,m reach, 3\,kg payload); led cross-disciplinary team of 5
+      \item Architected distributed control system using ROS2, Ethernet TCP/IP, CAN bus motor controllers, and Python SDK
+      \item Designed modular joint mechanisms for scalable robot architecture
+    \end{itemize}
+
+    \divider
+
+    \textbf{You vs Cobot: Chess Application} 
+    \href{https://github.com/C-O-R-A/cora-chess}{\faGithub} | Mar 2025 -- Present
+    \begin{itemize}
+      \item Autonomous chess system with vision-based board recognition
+      \item CNN-based move selection showcasing full-stack robot integration
+    \end{itemize}
+
+    \divider
+
+    \textbf{Cavolab: Automated Cable Cleaning (Robotics Minor Project)} \href{https://cad.onshape.com/documents/b36124d5af2122816059b47e/w/a098d324fe5fae0158086b4f/e/7f46e26306718293dd50d8e4}{\faCube} | \\
+    Sept 2025 -- Feb 2026
+    \begin{itemize}
+      \item University minor project in collaboration with Prysmian Group
+      \item Led mechanical design of gantry system and pneumatic cleaning structures
+      \item Delivered prototype validation and technical documentation for potential industry application
+    \end{itemize}
+
+    \divider
+
+    \textbf{Atlas: 6-DOF Desktop Arm} | Sept 2024 -- Mar 2025
+    \begin{itemize}
+      \item Designed articulated robotic arm (500\,mm reach, 1\,kg payload)
+      \item Developed embedded control system on ESP32
+      \item Implemented ROS 2 control and MoveIt 2 stack
+      \item Early prototype contributing to Cora platform development
+    \end{itemize}
+
+    
+    \cvsection{Professional Experience}
+    
+    \cvevent{Teaching Assistant -- VideoFastLane}{TU Delft - TLS}{Feb 2026 -- Apr 2026}{}
+    2D animation support, student guidance, and course communication
+    
+    \medskip
+    \divider
+    
+    \cvevent{Teaching Assistant -- Robotics}{TU Delft - ME}{Feb 2026 -- Apr 2026}{}
+    Lab instruction, assessment, and robotics fundamentals support
+    
+    \medskip
+    \divider
+    
+    \cvevent{Teaching Assistant -- CAD}{TU Delft - ME}{Nov 2023 -- Feb 2026}{}
+    SolidWorks instruction and CAD mentorship
+    
+    \medskip
+    \divider
+    
+    \cvevent{Student Mentor}{TU Delft - ME}{Sept 2024 -- Feb 2025}{}
+    Academic and professional guidance for undergraduate students
+    \switchcolumn
+    
+    \cvsection{Education}
+
+    \cvevent{B.Sc.\ Mechanical Engineering}{TU Delft}{Sept 2022 -- June 2026}{}
+
+    \medskip
+
+    \cvevent{Minor in Robotics}{TU Delft}{Sept 2025 -- Jan 2026}{}
+
+    
+    \cvsection{Extracurricular}
+
+    \textbf{Workshop Committee | RSA Delft}{}
+    Facility management and technical workshop coordination
+
+    \divider
+
+    \textbf{Hackathons}{}
+     \begin{itemize}
+      \item \textbf{Aeroshield | DCSC - TU Delft}\\
+      Ping pong ball thrower control system using open source Aeroshield
+      \item \textbf{Underground | Samxl and RSA}\\
+      Remote controlled duct navigating and inspection robot
+      \item \textbf{Renewable Energy | Samxl and RSA}\\
+      Turbine blade inspection robot for offshore wind farms
+      \item \textbf{Boskalis | RSA}\\
+      Autonomous seagrass planting robot for coastal restoration
+    \end{itemize}
+    
+    
+    \cvsection{Technical Skills}
+    
+    \cvsubsection{Robotics \& Embedded Systems}
+    ROS 2, Ethernet TCP/IP, CAN Bus, Raspberry Pi, RP2040, Real-time Control
+    
+    \smallskip
+    
+    \cvsubsection{Software}
+    Python, C++, Git, Firmware Development
+    
+    \smallskip
+    
+    \cvsubsection{Design \& CAD}
+    SolidWorks, Onshape, FEA, 3D Printing, CNC Machining
+    
+    \smallskip
+    
+    \cvsubsection{Electronics}
+    KiCAD, Microcontrollers, Motor Control, Sensor Integration
+    
+    \smallskip
+    
+    \cvsubsection{Professional}
+    Agile/Scrum, Cross-team Communication
+    
+    \cvsection{Certifications}
+      \begin{itemize}
+        \item{CSWA (Certified Solidworks Associate)}{}{}{}
+        \item{CSWA – Simulation}{}{}{}
+        \item{CSWP (Professional)}{}{}{}
+        \item{CSWPA (Advanced) – Drawings}{}{}{}
+        \item{CSWPA – Weldments}{}{}{}
+        \item{CSWPA – Sheetmetal}{}{}{}
+        \item{CSWPA – Surfacing}{}{}{}
+        \item{CSWE (Expert)}{}{}{}
+      \end{itemize}
+ 
+  \end{paracol}
+  \end{document}
