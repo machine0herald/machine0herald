@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Matthew</h1>
+<h1 align="center">Hi, I'm Matthew</h1>
 <h3 align="center">An aspiring Robotics Engineer</h3>
 
 - Bsc student Mechanical engineering
